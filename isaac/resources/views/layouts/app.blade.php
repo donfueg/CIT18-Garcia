@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ config('app.name', 'Laravel') }}</title>
-    <!-- Optionally add your CSS here -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    
+    <!-- Include Tailwind CSS via Vite -->
+    @vite('resources/css/app.css')
 </head>
-<body>
-    <div class="container">
-        <!-- This is where the content of the view will be inserted -->
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="max-w-4xl w-full bg-white p-6 rounded-lg shadow-md">
         @yield('content')
     </div>
+
 </body>
 </html>
